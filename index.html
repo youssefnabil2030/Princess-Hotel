@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Princess Hotel</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,13 +26,27 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Princess Hotel</h1>
-                <p>Your Luxurious Escape Awaits</p>
-                <button class="cta-button">Book Now</button>
-            </div>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="V1.mp4" type="video/mp4">
+            </video>
+            <model-viewer
+              src="path/to/your/3d/model.glb"
+              ios-src="path/to/your/3d/model.usdz"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              auto-rotate
+              alt="A 3D model of the Princess Hotel"
+              class="model-viewer">
+          </model-viewer>
+    
+            <h1>Welcome to Princess Hotel</h1>
+            <p>Your Luxurious Escape Awaits</p>
+            <button class="cta-button">Book Now</button>
+        </div>
+    </section>    
 
         <section id="rooms" class="rooms">
             <h2>Our Rooms & Suites</h2>
