@@ -61,46 +61,43 @@ body {
 }
 
 /* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
 .hero-video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    object-fit: cover; /* يضمن تغطية الفيديو للمساحة المتاحة */
-    z-index: -1; /* يجعل الفيديو خلف المحتوى النصي */
-}
-.hero-content{
-   position: relative; /* مهم لكي يعمل z-index في .hero-video */
-    z-index: 1;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.model-viewer{
-  width:500px;
-  height:500px;
-  margin:0 auto;
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    padding: 2rem;
+    z-index: 2;
 }
 
-@media (min-width: 769px) { /* Adjust breakpoint as needed */
- .model-viewer {
-     display: block;
-     width:40%;
-     height:50%; /* او اي نسبه اخري */
-  }
-   .hero-video{
-   display:none;
-  }
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-   .model-viewer {
-        display: none;
-
-    }
-    .hero-video{
-       display:block;
-    }
-
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .cta-button {
