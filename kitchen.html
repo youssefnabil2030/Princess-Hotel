@@ -9,27 +9,66 @@
         body {
             margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
         }
+
+        header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 24px;
+            text-align: center;
+        }
+
         model-viewer {
             width: 100%;
-            height: 100vh;
+            height: 80vh;
+            background-color: #eee;
         }
     </style>
 </head>
 <body>
+    <!-- زر الرجوع وعنوان الصفحة -->
+    <header>
+        <button onclick="window.history.back()">⬅️ Back</button>
+        <h1>Kitchen 3D AR View</h1>
+    </header>
+
+    <!-- موديل 3D مع خاصية AR -->
     <model-viewer 
-                src="kitchen.glb" 
-                alt="3D Model of Princess Hotel"
-                ar 
-                ar-modes="webxr scene-viewer quick-look" 
-                environment-image="neutral"
-                auto-rotate 
-                camera-controls 
-                style="width: 100%; height: 500px; margin-bottom: 20px;">
-            </model-viewer>
+        src="kitchen.glb" 
+        alt="3D Model of Kitchen" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        auto-rotate>
+    </model-viewer>
 </body>
 </html>
