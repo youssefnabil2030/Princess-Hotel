@@ -364,6 +364,7 @@ footer {
     .hero-content p {
         font-size: 1.2rem;
     }
+    .room-bottom{
   span{
   position: relative;
   display: inline-flex;
@@ -406,4 +407,5 @@ span a:after{
 span a:hover{
   transform: translateZ(-25px) rotateX(-90deg);
 }
+    }
 }
