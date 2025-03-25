@@ -1,14 +1,43 @@
-<section id="kitchen-3d" class="kitchen-3d">
-            <h2>Explore Princess Hotel in 3D & AR</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen 3D View - Princess Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Princess Hotel</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#rooms">Rooms</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="kitchen-3d" class="kitchen-3d">
+            <h2>Explore the Kitchen in 3D & AR</h2>
             <model-viewer 
                 src="kitchen.glb" 
-                alt="3D Model of Princess Hotel"
+                alt="3D Model of Kitchen" 
                 ar 
                 ar-modes="webxr scene-viewer quick-look" 
-                environment-image="neutral"
+                environment-image="neutral" 
                 auto-rotate 
                 camera-controls 
                 style="width: 100%; height: 500px; margin-bottom: 20px;">
             </model-viewer>
+        </section>
+    </main>
 
-</section>
+    <footer>
+        <p>&copy; 2025 Princess Hotel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
