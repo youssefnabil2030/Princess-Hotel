@@ -36,13 +36,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Room Button Click Handler
-const roomButtons = document.querySelectorAll('.room-button');
-roomButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        alert('Room booking feature coming soon!');
-    });
-});
+
+
 
 // Add Animation on Scroll
 function reveal() {
