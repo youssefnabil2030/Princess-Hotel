@@ -56,6 +56,32 @@
                 style="width: 100%; height: 500px; margin-bottom: 20px;">
             </model-viewer>
              </section>
+- var btnWidth = 195;
+- var btnHeight = 75;
+- var size = 15;
+
+button.btn-challenge
+  span Home
+  small Hover for effect
+  .hover-area
+    - for (let y = 0; y < btnHeight; y += size)
+      - for (let x = 0; x < btnWidth; x += size)
+          .hover-col
+    .icon-home
+      .roof.roof-1
+      .roof.roof-2
+      .roof-design.roof-design-1
+      .roof-design.roof-design-2
+      .roof-side.roof-side-1
+      .roof-side.roof-side-2
+      .roof-wall.roof-wall-1
+      .roof-wall.roof-wall-2
+      .wall.wall-1
+      .wall.wall-2
+      .wall.wall-3
+      .wall.wall-4
+      .door
+      .floor
 
         <section id="rooms" class="rooms">
             <h2>Our Rooms & Suites</h2>
