@@ -9,29 +9,21 @@
 </head>
 <body>
     <header>
-    <nav class="navbar">
-        <div class="logo-container">
-            <!-- الموديل ثلاثي الأبعاد للّوجو -->
-            <model-viewer 
-                src="Future.glb" 
-                alt="3D Model of logo"
-                auto-rotate 
-                animation-speed="20"
-                disable-pan
-                disable-zoom
-                style="width: 50px; height: 50px; pointer-events: none;">
-            </model-viewer>
-            <span class="logo-text">Princess Hotel</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#rooms">Rooms</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
+        <nav class="navbar">
+            <div class="logo">Princess Hotel</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <section id="home" class="hero">
@@ -53,13 +45,16 @@
             <h2>Explore Princess Hotel in 3D & AR</h2>
            <model-viewer 
                 src="Future.glb" 
-                alt="3D Model of logo"
+                alt="3D Model of Logo"
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                environment-image="neutral"
                 auto-rotate 
-                animation-speed="2"      
-                disable-pan               
-                disable-zoom              
-                style="width: 100px; height: 100px; pointer-events: none; margin-bottom: 20px;"> 
-                </model-viewer>    
+                animation-speed="200"
+                disable-pan
+                disable-zoom
+                style="width: 100%; height: 500px; margin-bottom: 20px;">
+            </model-viewer>
              </section>
 
         <section id="rooms" class="rooms">
